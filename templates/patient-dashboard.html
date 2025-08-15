@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jansevak</title>
+    <title>AI Diagnosis</title>
     <link rel="icon" href="./static/images/heart-pulse-solid.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -46,12 +46,11 @@
 <body>
 
     <header class="header">
-        <a href="{{url_for('index')}}" class="logo"><i class="fas fa-heartbeat"></i> jansevak</a>
+        <a href="{{url_for("index")}}" class="logo"><i class="fas fa-heartbeat"></i> AI Diagnosis</a>
         <nav class="navbar">
             {% if username %}
             <a href="{{url_for('index')}}#home">Home</a>
             <a href="{{url_for('index')}}#services">services</a>
-            <a href="{{url_for('index')}}#book">Book</a>
             <a href="{{url_for('index')}}#scans">Scans</a>
             <a href="{{url_for('index')}}#blogs">Blogs</a>
             <a href="{{url_for('index')}}#about">about</a>
@@ -71,7 +70,7 @@
 
         </div>
         <div class="content">
-            <h3>Welcome to <span style="color: #16a085;">Jansevak</span> . <br> <span style="font-size: 4.0rem;">your
+            <h3>Welcome to <span style="color: #16a085;">AI Diagnosis</span> . <br> <span style="font-size: 4.0rem;">your
                     Personalized Healthcare telemedicine assistant platform.</span></h3>
             <!-- <h3>stay healthy</h3> -->
             <p>Artificial Intelligence (AI) has revolutionized the field of telemedicine and healthcare, offering
@@ -111,47 +110,9 @@
         <h1 class="heading">services & <span>Features</span></h1>
         <div class="box-container">
             <div class="glass-box">
-                <i class="fas fa-notes-medical"></i>
-                <h3>24 | 7 AI Chat</h3>
-                <p>Get instant diagnoses and health advice from our AI assistant anytime, anywhere.</p>
-                <a href="" class="btn"> learn more <span class="fas fa-chevron-right"></span></a>
-            </div>
-            <div class="glass-box">
-                <i class="fas fa-comments"></i>
-                <h3>Chat with Doctors</h3>
-                <p>Message our team of licensed doctors and get personalized medical advice.</p>
-                <a href="" class="btn"> learn more <span class="fas fa-chevron-right"></span></a>
-            </div>
-            <div class="glass-box">
-                <i class="fas fa-video"></i>
-                <h3>Video Conference</h3>
-                <p>Schedule virtual appointments and consultations with top specialists doctors.</p>
-                <a href="{{url_for('videocall')}}" class="btn"> learn more <span class="fas fa-chevron-right"></span></a>
-            </div>
-            <div class="glass-box">
-                <i class="fas fa-user-doctor"></i>
-                <h3>Book Doctors</h3>
-                <p>Search for in-network doctors and instantly book appointments.</p>
-                <a href="#book" class="btn"> learn more <span class="fas fa-chevron-right"></span></a>
-            </div>
-            <div class="glass-box">
-                <i class="fas fa-envelope"></i>
-                <h3>SMS | Mail service</h3>
-                <p>Get medication reminders, test results, and appointment alerts via SMS or email.</p>
-                <a href="" class="btn"> learn more <span class="fas fa-chevron-right"></span></a>
-            </div>
-            <div class="glass-box">
-                <i class="fas fa-heartbeat"></i>
-                <h3>Scan Reports</h3>
-                <p>Upload and store lab tests, imaging scans, and medical records securely.</p>
-                <a href="#scans" class="btn"> learn more <span class="fas fa-chevron-right"></span></a>
-            </div>
-            <div class="glass-box">
                 <i class="fas fa-plus"></i>
                 <h3>mental health</h3>
-                <p>Supportive and Confidential Mental Health Guidance.</p>
-                <a href="{{url_for('mentalhealth')}}" class="btn"> learn more <span class="fas fa-chevron-right"></span></a>
-            </div>
+                <p>Supportive and Confidential Mental Health Guidance.</                <a href="{{url_for("mentalhealth")}}" class="btn"> learn more <span class="fas fa-chevron-right"></span></a>            </div>
             <div class="glass-box">
                 <i class="fa-brands fa-blogger"></i>
                 <h3>Healty Blogs</h3>
@@ -172,70 +133,6 @@
             </div>
 
         </div>
-    </section>
-
-    <section class="doctors" id="doctors">
-        <h1 class="heading">
-            our <span> Doctors</span>
-        </h1>
-        <div class="box-container">
-            <div class="carousel owl-carousel">
-                <div class="glass-box" style="height: 43rem;">
-                    <center><img src="../static/images/doc2.jpg" alt="" style="height: 30rem; width: 25rem;"></center>
-                    <h3>Dr. Vikram Kapoor</h3>
-                    <span>Pediatrician</span>
-                    
-                </div>
-                <div class="glass-box" style="height: 43rem;">
-                    <center>
-                    <img src="../static/images/doc1.jpg" alt="" style="height: 30rem; width: 25rem;">
-
-                    </center>
-                    <h3>Dr. Rahul Desai</h3>
-                    <span>Cardiologist</span>
-                   
-                </div>
-                <div class="glass-box" style="height: 43rem;">
-                    <center>
-                    <img src="../static/images/doc3.jpeg" alt="" style="height: 30rem; width: 25rem;">
-
-                    </center>
-
-                    <h3>Dr. Aryan Joshi</h3>
-                    <span>Orthopedic Surgeon</span>
-                  
-                </div>
-                <div class="glass-box" style="height: 43rem;">
-                    <center>
-                    <img src="../static/images/doc4.jpg" alt="" style="height: 30rem; width: 25rem;">
-
-                    </center>
-
-                    <h3>Dr. Siddharth Malhotra</h3>
-                    <span>Psychiatrist</span>
-                   
-                </div>
-                <div class="glass-box" style="height: 43rem;">
-                    <center>
-                    <img src="../static/images/doc5.jpeg" alt="" style="height: 30rem; width: 25rem;">
-
-                    </center>
-
-                    <h3>Dr. Rohit Choudhary</h3>
-                    <span>Dermatologist</span>
-                   
-                </div>
-            </div>
-            
-
-        </div>
-    </section>
-
-    
-
-    <section class="blogs" id="book">
-        <h1 class="heading">Book <span>Appointment</span></h1>
-        <center><a class="btn" href="{{ url_for('book_appointment') }}">Book Appointment</a></center>
     </section>
 
     <section class="services" id="scans">
@@ -266,7 +163,7 @@
             <div class="glass-box">
                 <i class="fas fa-eye"></i>
                 <h3>cataract</h3>
-                <p>Cataract is a clouding of the eye's lens, causing blurry vision. Common with aging, surgery replaces the clouded lens
+                <p>Cataract is a clouding of the eye\\\'s lens, causing blurry vision. Common with aging, surgery replaces the clouded lens
                 for clarity.</p>
                 <a href="{{url_for('cataract')}}" class="btn"> Explore <span class="fas fa-chevron-right"></span></a>
             </div>
@@ -287,13 +184,13 @@
                 </div>
                 <div class="content">
                     <div class="icon">
-                        <a href="" class="disabled"><i class="fas fa-calendar"></i> 25th dec, 2023</a>
+                        <a href="" class="disabled"><i class="fas fa-calendar"></i> 23th may, 2025</a>
                         <a href="{{url_for('admin')}}"><i class="fas fa-user"></i> by admin</a>
 
                     </div>
                     <h3>Transforming Healthcare</h3>
                     <p>Transforming Healthcare: The Human Touch of AI and Telemedicine.</p>
-                    <a href="{{url_for('Transforming_Healthcare')}}" class="btn">Read more <span
+                     <a href="{{url_for('Transforming_Healthcare')}}" class="btn">Read more <span
                             class="fas fa-chevron-right"></span></a>
                 </div>
             </div>
@@ -303,7 +200,7 @@
                 </div>
                 <div class="content">
                     <div class="icon">
-                        <a href="" class="disabled"><i class="fas fa-calendar"></i> 26th dec, 2023</a>
+                        <a href="" class="disabled"><i class="fas fa-calendar"></i> 23th may, 2025</a>
                         <a href="{{url_for('admin')}}"><i class="fas fa-user"></i> by admin</a>
 
                     </div>
@@ -320,7 +217,7 @@
                 </div>
                 <div class="content">
                     <div class="icon">
-                        <a href="" class="disabled"><i class="fas fa-calendar"></i> 27th dec, 2023</a>
+                        <a href="" class="disabled"><i class="fas fa-calendar"></i> 23th may, 2025</a>
                         <a href="{{url_for('admin')}}"><i class="fas fa-user"></i> by admin</a>
 
                     </div>
@@ -337,7 +234,7 @@
                 </div>
                 <div class="content">
                     <div class="icon">
-                        <a href="" class="disabled"><i class="fas fa-calendar"></i> 27th dec, 2023</a>
+                        <a href="" class="disabled"><i class="fas fa-calendar"></i> 23th may, 2025</a>
                         <a href="{{url_for('admin')}}"><i class="fas fa-user"></i> by admin</a>
 
                     </div>
@@ -362,10 +259,8 @@
                 <p>We are a Group of two undergrad student of KIIT, Bhubaneswar, Odisha, INDIA.</p>
                 <p>Still learning and have a great interest in developing and integrating different types of
                     technologies. Worked with various Tech stacks and participated in numerous events, hackathons and
-                    competetions and the count will never stop. <br> Want to know more about us ? Click below to explore:
-                </p>
-                <a href="{{url_for('admin')}}" class="btn">Know More <i class="fas fa-chevron-right"></i></a><br>
-
+                    workshops.</p>
+                <a href="" class="btn">learn more <i class="fas fa-chevron-right"></i></a>
             </div>
         </div>
     </section>
@@ -376,50 +271,45 @@
                 <h3>quick links</h3>
                 <a href="{{url_for('index')}}#home"><i class="fas fa-chevron-right"></i> home</a>
                 <a href="{{url_for('index')}}#services"><i class="fas fa-chevron-right"></i> services</a>
-                <a href="{{url_for('index')}}#book"><i class="fas fa-chevron-right"></i>book</a>
                 <a href="{{url_for('index')}}#scans"><i class="fas fa-chevron-right"></i> scans</a>
                 <a href="{{url_for('index')}}#blogs"><i class="fas fa-chevron-right"></i> blogs</a>
                 <a href="{{url_for('index')}}#about"><i class="fas fa-chevron-right"></i> about</a>
-
-
             </div>
+
             <div class="box">
-                <h3>our services </h3>
-                <a href="#book"><i class="fas fa-chevron-right"></i> Book Appointment</a>
-                <a href="#services"><i class="fas fa-chevron-right"></i> Chat with Doc</a>
-                <a href="#services"><i class="fas fa-chevron-right"></i> Mental Health</a>
-                <a href="#services"><i class="fas fa-chevron-right"></i> Chatbot</a>
-                <a href="#scans"><i class="fas fa-chevron-right"></i> Scans</a>
-                <a href="#blogs"><i class="fas fa-chevron-right"></i> Blogs</a>
-
-
+                <h3>our services</h3>
+                <a href="#"><i class="fas fa-chevron-right"></i> AI Chat</a>
+                <a href="#"><i class="fas fa-chevron-right"></i> SMS | Mail service</a>
+                <a href="#"><i class="fas fa-chevron-right"></i> Scan Reports</a>
+                <a href="#"><i class="fas fa-chevron-right"></i> Mental Health</a>
             </div>
+
             <div class="box">
                 <h3>contact info</h3>
-                <a href="" class="disabled"><i class="fas fa-phone"></i>+91 70441 35575</a>
-                <a href="" class="disabled"><i class="fas fa-phone"></i> +91 62916 53332</a>
-                <a href="mailto:21051302@kiit.ac.in"><i class="fas fa-envelope"></i>21051302@kiit.ac.in</a>
-                <a href="mailto:21051706@kiit.ac.in"><i class="fas fa-envelope"></i>21051706@kiit.ac.in</a>
-                <a href="" class="disabled"><i class="fas fa-map-marker-alt"></i>WB, INDIA</a>
+                <a href="#"><i class="fas fa-phone"></i> +92-3089017938</a>
+                <a href="#"><i class="fas fa-phone"></i> +92-3488832950</a>
+                <a href="#"><i class="fas fa-envelope"></i> aidiagnosis@gmail.com</a>
+                <a href="#"><i class="fas fa-envelope"></i> aidiagnosis@outlook.com</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Timergara, Pakistan - 18300</a>
             </div>
+
             <div class="box">
                 <h3>follow us</h3>
-                <a href="https://www.linkedin.com/in/abhishek-mallick09/"><i class="fab fa-linkedin"></i>linkedin</a>
-                <a href="https://www.linkedin.com/in/deepraj-bera-b64996231/"><i
-                        class="fab fa-linkedin"></i>linkedin</a>
-                <a href="https://github.com/Abhishek-Mallick"><i class="fab fa-github"></i>Github</a>
-                <a href="https://github.com/deepraj21"><i class="fab fa-github"></i>Github</a>
+                <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+                <a href="#"><i class="fab fa-linkedin"></i> linkedin</a>
             </div>
         </div>
 
-        <div class="credit">made with 💚 | Jansevak @ 2023</div>
+        <div class="credit"> all rights reserved </div>
     </section>
-    <script src="./static/js/script.js"></script>
+
+    <script src="../static/js/script.js"></script>
     <script>
         $('.carousel').owlCarousel({
             margin: 20,
             loop: true,
-            autoplay: true,
             autoplayTimeOut: 2000,
             autoplayHoverPause: true,
             responsive: {
@@ -432,17 +322,13 @@
                     nav: false
                 },
                 1000: {
-                    items: 4,
+                    items: 3,
                     nav: false
                 }
             }
         });
     </script>
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger intent="WELCOME" chat-title="JanSevak" agent-id="2bb91a2b-a2a4-4283-be4d-e593eeb44bfb"
-        language-code="en"></df-messenger>
-
-
 </body>
 
 </html>
+

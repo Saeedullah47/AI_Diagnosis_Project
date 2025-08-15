@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jansevak</title>
+    <title>AI Diagnosis</title>
     <link rel="icon" href="./static/images/heart-pulse-solid.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -33,12 +33,11 @@
 
 <body>
     <header class="header">
-        <a href="{{url_for('index')}}" class="logo"><i class="fas fa-heartbeat"></i> jansevak</a>
+        <a href="{{url_for('index')}}" class="logo"><i class="fas fa-heartbeat"></i> AI Diagnosis</a>
         <nav class="navbar">
             {% if username %}
             <a href="{{url_for('index')}}#home">Home</a>
             <a href="{{url_for('index')}}#services">services</a>
-            <a href="{{url_for('index')}}#book">Book</a>
             <a href="{{url_for('index')}}#scans">Scans</a>
             <a href="{{url_for('index')}}#blogs">Blogs</a>
             <a href="{{url_for('index')}}#about">about</a>
@@ -56,7 +55,7 @@
         
             <div class="glass-row" style="margin-top:100px;">
                 <div class="prediction-form">
-                    <a href="{{url_for('index')}}" class="logo"><i class="fas fa-heartbeat"></i> Jansevak</a><br><br>
+                    <a href="{{url_for('index')}}" class="logo"><i class="fas fa-heartbeat"></i> AI Diagnosis</a><br><br>
         
                     <div class="box">
                         <div class="label" id="label-container"></div>
@@ -71,7 +70,7 @@
                         <button class="select-image btn" style="background-color: rgba(255, 255, 255, 0);">Select
                             Image</button>
                     </div>
-                    <p style="color: white; font-size: 1.3rem; margin-top: 2rem;">By continuing, you agree to Jansevak's
+                    <p style="color: white; font-size: 1.3rem; margin-top: 2rem;">By continuing, you agree to AI Diagnosis's
                         <a style="color: #16a085;" href="{{url_for('policy')}}">Terms of Service</a> Opens a new tab and
                         acknowledge you've read our Privacy
                         Policy. Notice at collection.
@@ -86,7 +85,6 @@
                     <h3>quick links</h3>
                     <a href="{{url_for('index')}}#home"><i class="fas fa-chevron-right"></i> home</a>
                     <a href="{{url_for('index')}}#services"><i class="fas fa-chevron-right"></i> services</a>
-                    <a href="{{url_for('index')}}#book"><i class="fas fa-chevron-right"></i>book</a>
                     <a href="{{url_for('index')}}#scans"><i class="fas fa-chevron-right"></i> scans</a>
                     <a href="{{url_for('index')}}#blogs"><i class="fas fa-chevron-right"></i> blogs</a>
                     <a href="{{url_for('index')}}#about"><i class="fas fa-chevron-right"></i> about</a>
@@ -95,9 +93,6 @@
                 </div>
                 <div class="box">
                     <h3>our services </h3>
-                    <a href="{{url_for('index')}}#book"><i class="fas fa-chevron-right"></i> Book Appointment</a>
-                <a href="{{url_for('index')}}#services"><i class="fas fa-chevron-right"></i> Chat with Doc</a>
-                <a href="{{url_for('index')}}#services"><i class="fas fa-chevron-right"></i> Mental Health</a>
                 <a href="{{url_for('index')}}#services"><i class="fas fa-chevron-right"></i> Chatbot</a>
                 <a href="{{url_for('index')}}#scans"><i class="fas fa-chevron-right"></i> Scans</a>
                 <a href="{{url_for('index')}}#blogs"><i class="fas fa-chevron-right"></i> Blogs</a>
@@ -106,22 +101,22 @@
                 </div>
                 <div class="box">
                     <h3>contact info</h3>
-                    <a href="" class="disabled"><i class="fas fa-phone"></i>+91 70441 35575</a>
-                    <a href="" class="disabled"><i class="fas fa-phone"></i> +91 62916 53332</a>
-                    <a href="mailto:21051302@kiit.ac.in"><i class="fas fa-envelope"></i>21051302@kiit.ac.in</a>
-                    <a href="mailto:21051706@kiit.ac.in"><i class="fas fa-envelope"></i>21051706@kiit.ac.in</a>
-                    <a href="" class="disabled"><i class="fas fa-map-marker-alt"></i>WB, INDIA</a>
+                    <a href="" class="disabled"><i class="fas fa-phone"></i>+92 30890 17938</a>
+                    <a href="" class="disabled"><i class="fas fa-phone"></i>+92 34888 32950</a>
+                    <a href="mailto:altaf144156@gmail.com"><i class="fas fa-envelope"></i>altaf144156@gmail.com</a>
+                    <a href="mailto:majorjan26@gmail.cot"><i class="fas fa-envelope"></i>majorjan26@gmail.com</a>
+                    <a href="" class="disabled"><i class="fas fa-map-marker-alt"></i>Timergara, Pakistan</a>
                 </div>
                 <div class="box">
                     <h3>follow us</h3>
-                    <a href="https://www.linkedin.com/in/abhishek-mallick09/"><i class="fab fa-linkedin"></i>linkedin</a>
-                    <a href="https://www.linkedin.com/in/deepraj-bera-b64996231/"><i class="fab fa-linkedin"></i>linkedin</a>
-                    <a href="https://github.com/Abhishek-Mallick"><i class="fab fa-github"></i>Github</a>
-                    <a href="https://github.com/deepraj21"><i class="fab fa-github"></i>Github</a>
+                    <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+                    <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+                    <a href="#"><i class="fab fa-github"></i>Github</a>
+                    <a href="#"><i class="fab fa-github"></i>Github</a>
                 </div>
             </div>
         
-            <div class="credit">made with 💚 | Jansevak @ 2023</div>
+            <div class="credit">made with AI Diagnosis @2025</div>
         </section>
         <script src="./static/js/script.js"></script>
     <!-- <div class="container">
